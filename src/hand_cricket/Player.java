@@ -49,4 +49,16 @@ public class Player {
     public void updateStatBall(int run){
         statBall.add(run);
     }
+    
+    public void displayResult(int code){
+        switch(code){
+            case 0:
+                System.out.println(playerName+", You won the match!");
+                break;
+                
+            case 1:
+                System.out.println(playerName+", you lost the match!");
+                break;
+        }
+    }
 }
