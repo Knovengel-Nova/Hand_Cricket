@@ -12,20 +12,20 @@ import java.util.Scanner;
  * @author Aryan
  */
 public class Utility {
-    Random rand = new Random();
-    Scanner sc = new Scanner(System.in);
+    static Random rand = new Random();
+    static Scanner sc = new Scanner(System.in);
     
-    public int inputNum(String msg){
+    public static int inputNum(String msg){
         System.out.print(msg+": ");
         return sc.nextInt();
     }
     
-    public String inputStr(String msg){
+    public static String inputStr(String msg){
         System.out.print(msg+": ");
         return sc.next();
     }
     
-    public int getRandom(int upper){
+    public static int getRandom(int upper){
         return rand.nextInt(upper+1);
     }
 }

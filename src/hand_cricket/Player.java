@@ -15,11 +15,24 @@ public class Player {
     private ArrayList<Integer> statBat = new ArrayList<>();
     private ArrayList<Integer> statBall = new ArrayList<>();
     private String playerName;
+    private boolean isPlayerDead = false;
+    
+    public boolean getPlayerStatus(){
+        return isPlayerDead;
+    }
+    
+    public void setPlayerStatus(boolean status){
+        isPlayerDead = status;
+    }
     
     public void updateScore(int run){
         if(run>=0 && run<=6){
             score += run;
         }
+    }
+    
+    public int getMove(){
+        return Utility.inputNum(playerName+", Make your Move");
     }
     
     public int getScore(){
@@ -58,6 +71,10 @@ public class Player {
                 
             case 1:
                 System.out.println(playerName+", you lost the match!");
+                break;
+                
+            case 2:
+                System.out.println(playerName+", you are dead!");
                 break;
         }
     }
